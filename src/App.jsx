@@ -15,7 +15,6 @@ function App() {
     <CartContextProvider>
     <BrowserRouter>
     <Navbar/>
-    <section>
     <Routes>
       <Route path='/' element={<Index/>}/>
       <Route path='/clase/:idClase' element={<ItemListContainer/>}/>
@@ -24,7 +23,6 @@ function App() {
       <Route path='/Cart' element={<Cart/>}/>
       <Route path='/atr' element={<CrearProductos/>}/>
     </Routes>
-    </section>
     <Footer/>
     </BrowserRouter>
     </CartContextProvider>
