@@ -14,7 +14,7 @@ const MenuOpcion = (props) => {
                     <h1>{aaa.toUpperCase()}</h1>
                     <div className='MenuOpcion2 d-flex flex-column flex-wrap'>
                     {
-                    props.secundario.map(item => <Opcionsecundaria nombre={item}/>)
+                    props.secundario.map(item => <Opcionsecundaria key={item} nombre={item}/>)
                     }
                     </div>
                 </div>

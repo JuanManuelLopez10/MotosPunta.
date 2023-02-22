@@ -1,20 +1,14 @@
 import React from 'react'
-import OpcionesIndexContainer from './index/opcionesIndex/OpcionesIndexContainer'
-import Portada from './index/portada/Portada'
+import OpcionesIndexContainer from './opcionesIndex/OpcionesIndexContainer'
+import Portada from './portada/Portada'
 import { useEffect, useState } from "react";
 import { collection, getDocs, query } from "firebase/firestore"; 
-import { useContext } from 'react';
-import { CartContext } from './CartContext';
-import { db } from '../utils/firebaseConfig';
+import { db } from '../../utils/firebaseConfig';
 
 
 const Index = () => {
   const [datos, setDatos] = useState([])
-  const { primeroferta, crearseleccionados, seleccasco } = useContext(CartContext)
-  const abrircont = (a) => {
-    primeroferta(a)
-    crearseleccionados()
-  }
+
   useEffect(() => {
       const fetchFirestore = async() => {
           let q;
@@ -34,15 +28,12 @@ const Index = () => {
   }, []);
   
   if (datos ) {
-    abrircont(datos)
-    if (seleccasco) {
       return (
         <>
         <Portada/>
         <OpcionesIndexContainer/>
         </>
         )
-    }
 
   }
   
