@@ -15,14 +15,17 @@ function App() {
     <CartContextProvider>
     <BrowserRouter>
     <Navbar/>
-    <Index/>
+    <section>
     <Routes>
+    
+      <Route path='/' element={<Index/>}/>
       <Route path='/clase/:idClase' element={<ItemListContainer/>}/>
       <Route path='/category/:idCat' element={<ItemListContainer/>}/>
       <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
       <Route path='/Cart' element={<Cart/>}/>
       <Route path='/atr' element={<CrearProductos/>}/>
     </Routes>
+    </section>
     <Footer/>
     </BrowserRouter>
     </CartContextProvider>
