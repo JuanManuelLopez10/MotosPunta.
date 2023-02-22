@@ -1,11 +1,11 @@
 import React from 'react'
-import OpcionesIndexContainer from './opcionesIndex/OpcionesIndexContainer'
-import Portada from './portada/Portada'
+import OpcionesIndexContainer from './index/opcionesIndex/OpcionesIndexContainer'
+import Portada from './index/portada/Portada'
 import { useEffect, useState } from "react";
 import { collection, getDocs, query } from "firebase/firestore"; 
 import { useContext } from 'react';
-import { CartContext } from '../CartContext';
-import { db } from '../../utils/firebaseConfig';
+import { CartContext } from './CartContext';
+import { db } from '../utils/firebaseConfig';
 
 
 const Index = () => {
@@ -38,7 +38,7 @@ const Index = () => {
     if (seleccasco) {
       return (
         <>
-        <Portada/>
+        {/* <Portada/> */}
         <OpcionesIndexContainer/>
         </>
         )
