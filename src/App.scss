@@ -1,0 +1,117 @@
+@use './scss/body.scss';
+@use './scss/header.scss';
+@use './scss/animacion.scss';
+@use './scss/portada.scss';
+@use './scss/opcionIndex.scss'; 
+@use './scss/novedades.scss';
+@use './scss/footer.scss';
+@use './scss/itemdetail.scss';
+
+@import "node_modules/direction-reveal/src/styles/direction-reveal.scss";
+
+html{
+  width: 100vw;
+  overflow-x: hidden;
+}
+#itemList{
+  background-image: url(../public/assets/fondo/garaje.jpg);
+  background-size: 100vw;
+}
+
+.bg-none{
+  background: none;
+  border: none;
+}
+.color-white{
+  color: white;
+}
+
+.opcionclase-vertical{
+  font-size: 2rem;
+}
+#navVertical{
+  z-index: 1;
+  position: fixed;
+}
+
+.cardtitulo{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.cardprecio{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+.itemModalCartnombre{
+  font-size: 1.3rem;
+}
+.itemModalCartcantidad{
+  font-size: 1rem;
+}
+.itemModalCartprecio{
+  font-size: 1.1rem;
+}
+.carrito{
+  color: white;
+  margin: 10px;
+
+}
+.opcionclase{
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  display: block;
+  position: relative;
+  padding: 0.2em;
+  overflow-y: visible;
+  font-family: 'Reem Kufi Fun', sans-serif;
+}
+.opcionclase:hover{
+  color: white;
+}
+.opcionclase::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.opcionclase:hover::after,
+.opcionclase:focus::after{
+  transform: scale(1);
+}
+#Cart_detalle{
+  border: solid black 1px;
+}
+.card-body{
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.card-producto{
+  box-shadow: 1px 1px 5px black;
+  text-decoration: none;
+}
+.card-producto:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+.card-producto:hover::after{
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+.Card_producto{
+  text-decoration: none;
+}

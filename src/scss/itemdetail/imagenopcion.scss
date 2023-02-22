@@ -1,0 +1,21 @@
+.imagenopcion{
+    margin-top: 10px;
+}
+.tituloopcion{
+    font-size: 1.2rem;
+}
+.descripcionopcion{
+    font-size: 0.8rem;
+}
+@media screen and (min-width: 480px) {
+    .imagenopcion{
+        margin-top: 20px;
+    }
+    .tituloopcion{
+        font-size: 2.5rem;
+    }
+    .descripcionopcion{
+        font-size: 1.5rem;
+    }
+}
+
