@@ -38,7 +38,7 @@ const Index = () => {
     if (seleccasco) {
       return (
         <>
-        {/* <Portada/> */}
+        <Portada/>
         <OpcionesIndexContainer/>
         </>
         )

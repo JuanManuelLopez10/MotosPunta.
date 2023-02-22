@@ -14,6 +14,7 @@ const Botonmenu = () => {
         });
       
         let result = await promise; // espera hasta que la promesa se resuelva (*)
+        console.log(result);
         usarcont.cerrarmenu()
       }else{
         const barraopciones = document.getElementById('navbar')
@@ -23,12 +24,12 @@ const Botonmenu = () => {
         });
       
         let result = await promise; // espera hasta que la promesa se resuelva (*)
-      
+        console.log(result);
         usarcont.cerrarmenu()
 
       }
       }
-      if (usarcont.abiertoono==false) {
+      if (usarcont.abiertoono===false) {
         return (
             <>
             <button onClick={usarcont.agregarmenu} className='botones bg-none color-white col-1'><i class="bi bi-list"></i></button>

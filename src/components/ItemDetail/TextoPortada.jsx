@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../CartContext'
 import 'animate.css';
@@ -10,7 +9,7 @@ import CuadradoOpcion from './CuadradoOpcion';
 const TextoPortada = ({item}) => {
   const usarcont = useContext(CartContext)
 
-  const { addToCart, calcpreciototal, calccanttotal, getHistorialseleccionado, productosseleccionados } = useContext(CartContext)
+  const { addToCart, calcpreciototal, calccanttotal, } = useContext(CartContext)
   const aa = () => {
   addToCart(item)
   calcpreciototal(item.precio, item.cantidad)
@@ -18,21 +17,7 @@ const TextoPortada = ({item}) => {
   }
 
   
-  const restar = () => {
-      let itemcantidad = document.getElementById('itemcantidad')
-      if (item.cantidad>=2) {
-          item.cantidad--
-          itemcantidad.innerText= "Cantidad: " + item.cantidad
-      }
-  }
-  const sumar = () => {
-      if (item.cantidad < item.stock) {
-          let itemcantidad = document.getElementById('itemcantidad')
-          item.cantidad++
-          itemcantidad.innerText= "Cantidad: " + item.cantidad
-      }
-     
-  }
+
 
 
   let opcion1 = item.opcion1

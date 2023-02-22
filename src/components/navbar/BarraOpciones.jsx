@@ -6,13 +6,13 @@ import { CartContext } from '../CartContext';
 
 const BarraOpciones = () => {
     const usarcont = useContext(CartContext)
-    if(usarcont.abiertoono==true && usarcont.scrorientation==='portrait'){
+    if(usarcont.abiertoono===true && usarcont.scrorientation==='portrait'){
     return(
         <div id='navbar' className='col-12 barraopciones d-flex flex-column align-items-center justify-content-center fixed-top animate__animated animate__fadeInLeft'>                    
             <MenuBarraOpciones/>
         </div>
     )
-    }else if(usarcont.abiertoono==true && usarcont.scrorientation==='landscape'){
+    }else if(usarcont.abiertoono===true && usarcont.scrorientation==='landscape'){
         return(
             <div id='navbar' className='col-3 barraopciones d-flex flex-column align-items-center justify-content-center fixed-top animate__animated animate__fadeInLeft'>                    
                 <MenuBarraOpciones/>

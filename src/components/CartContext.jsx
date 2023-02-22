@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { createContext, useState } from "react";
 import { db } from '../utils/firebaseConfig'
-import { collection, getDocs, query, where } from "firebase/firestore"; 
+import { collection, getDocs, query } from "firebase/firestore"; 
 
 export const CartContext = createContext();
 
@@ -59,18 +59,19 @@ const CartContextProvider = ({children}) => {
             const contadorindum = []
             const contadoracces = []
             historial.map(item => {
-                if(item.clase=='Cascos' && contadorcascos.length==0) {                     //si no hay definido un casco especial
+                if(item.clase==='Cascos' && contadorcascos.length===0) {                     //si no hay definido un casco especial
                     contadorcascos.push(item)
                     setseleccasco(item)                                                  //se selecciona el primer casco
                 }
-                if(item.clase=='Indumentaria' && contadorindum===undefined) {
+                if(item.clase==='Indumentaria' && contadorindum===undefined) {
                     contadorindum.push(item)
                     setselecindum(item)         
                 }
-                if(item.clase=='Accesorios' && contadoracces===undefined) {
+                if(item.clase==='Accesorios' && contadoracces===undefined) {
                     contadoracces.push(item)
                     setselecacces(item)         
                 }
+                return console.log("agar")
             }
             )
             const totales = [selecacces, seleccasco, selecindum]
@@ -82,30 +83,34 @@ const CartContextProvider = ({children}) => {
             const historial = JSON.parse(localStorage.getItem('historial'))         //se llega al historial
             if (historial) {                                                        //si hay historial
                 historial.map(item => {
-                    if(item.clase=='Cascos' && seleccasco===undefined) {                     //si no hay definido un casco especial
+                    if(item.clase==='Cascos' && seleccasco===undefined) {                     //si no hay definido un casco especial
                         setseleccasco(item)                                                  //se selecciona el primer casco
                     }
-                    if(item.clase=='Indumentaria' && selecindum===undefined) {
+                    if(item.clase==='Indumentaria' && selecindum===undefined) {
                         setselecindum(item)         
                     }
-                    if(item.clase=='Accesorios' && selecacces===undefined) {
+                    if(item.clase==='Accesorios' && selecacces===undefined) {
                         setselecacces(item)         
                     }
+                return console.log("agar")
+
                 })    
             }                                                                //si no hay historial
                 array.sort(function(a, b){return (b.prioridad) - (a.prioridad)})         //se ordena los productos
 
                 array.map(item => {
-                    if(item.clase=='Cascos' && seleccasco===undefined) {                //si no hay casco seleccionado
+                    if(item.clase==='Cascos' && seleccasco===undefined) {                //si no hay casco seleccionado
                         setseleccasco(item)
                     }
-                    if(item.clase=='Indumentaria' && selecindum===undefined) {
+                    if(item.clase==='Indumentaria' && selecindum===undefined) {
                         console.log(item);
                         setselecindum(item)         
                     }
-                    if(item.clase=='Accesorios' && selecacces===undefined) {
+                    if(item.clase==='Accesorios' && selecacces===undefined) {
                         setselecacces(item)         
                     }
+                return console.log("agar")
+
                 })    
 
         }
@@ -200,7 +205,7 @@ const CartContextProvider = ({children}) => {
         setCantProductos(0)
     }
     const deleteItem = (id) => {
-        let resultado = cartList.filter(item => item.id != id)
+        let resultado = cartList.filter(item => item.id !== id)
         let totalnuevo = 0
         let cantidadnuevo = 0
         resultado.map(item => totalnuevo += item.preciototal) 
@@ -240,7 +245,7 @@ const CartContextProvider = ({children}) => {
 
     }
     return(
-    <CartContext.Provider value={{cartList, primeroferta, seleccasco, selecindum, selecacces, crearseleccionados, getHistorialseleccionado, productosseleccionados, datos, seleccionaropcionIndex, abrirseleccionaropcionIndex, cerrarseleccionaropcionIndex, abrirproductos, abrircascos, abrirmotos, abririndumentaria, abriraccesorios, abiertoproductos, cerrarmenu,agregarmenu, abiertoono, addToCart, calcpreciototal, deleteItem, Totalcompra, calccanttotal, CantProductos, clear, cambiodeorient, scrorientation, getscrorient}}>
+    <CartContext.Provider value={{cartList, primeroferta, seleccasco, selecindum, selecacces, crearseleccionados, getHistorialseleccionado, productosseleccionados, setproductosseleccionados, datos, seleccionaropcionIndex, abrirseleccionaropcionIndex, cerrarseleccionaropcionIndex, abrirproductos, abrircascos, abrirmotos, abririndumentaria, abriraccesorios, abiertoproductos, cerrarmenu,agregarmenu, abiertoono, addToCart, calcpreciototal, deleteItem, Totalcompra, calccanttotal, CantProductos, clear, cambiodeorient, scrorientation, getscrorient}}>
         {children}
     </CartContext.Provider>
     )

@@ -7,7 +7,7 @@ import ItemModalCart from '../ItemModalCart';
 
 const CartWidget = () => {
   const [show, setShow] = useState(false);
-  const { cartList, calcpreciototal, Totalcompra, CantProductos, cerrarmenu } = useContext(CartContext)
+  const { cartList, Totalcompra, CantProductos, cerrarmenu } = useContext(CartContext)
   const cerrar = () => {
     setShow(false)
     cerrarmenu()
