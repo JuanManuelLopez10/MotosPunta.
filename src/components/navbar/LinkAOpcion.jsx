@@ -14,7 +14,7 @@ const LinkAOpcion = ({opcion}) => {
         });
       
         let result = await promise; // espera hasta que la promesa se resuelva (*)
-        console.log(result);
+      
         usarcont.cerrarmenu()
       }else{
         const barraopciones = document.getElementById('barraopciones')
@@ -24,7 +24,7 @@ const LinkAOpcion = ({opcion}) => {
         });
       
         let result = await promise; // espera hasta que la promesa se resuelva (*)
-        console.log(result);
+      
         usarcont.cerrarmenu()
 
       }

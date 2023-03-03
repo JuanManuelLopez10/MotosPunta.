@@ -1,10 +1,13 @@
 import React from 'react'
-import { doc, setDoc, collection } from "firebase/firestore";
+import { doc, setDoc, updateDoc, serverTimestamp, collection, increment } from "firebase/firestore";
 import { db } from '../../utils/firebaseConfig'
+import { CartContext } from '../CartContext';
+import { useContext } from 'react';
 import OpcionenForm from './OpcionenForm';
 
 
 const CrearProductos = () => {
+    const usarrcontext = useContext(CartContext)
     
     const createOrder = () => {
         const producto = {

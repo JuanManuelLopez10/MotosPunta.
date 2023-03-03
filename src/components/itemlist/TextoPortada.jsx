@@ -1,24 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { CartContext } from '../../CartContext'
 import 'animate.css';
+import { CartContext } from '../CartContext';
 
 
-const TextoPortada = () => {
+const TextoPortada = (props) => {
   const usarcont = useContext(CartContext)
   if(usarcont.scrorientation==='portrait'){
     return(
     <div className='portada-texto h-25 d-flex flex-column align-items-center justify-content-center col-12' >
-    <h2 className='color-white'>MT Revenge Replica</h2>
-    <Link className='opcionclase' to={`/item/mtkrepedroacosta`}>Ver más</Link>
+      <h1>{props.idCat}</h1>
   </div>
   )
   }else{
   return (
           <div className='portada-texto h-25 m-0 d-flex flex-column align-items-center justify-content-center col-12' >
-            <h2 className='color-white'>MT KRE+ Pedro Acosta</h2>
-            <Link className='opcionclase' to={`/item/mtkrepedroacosta`}>Ver más</Link>
+            <h1>{props.idCat}</h1>
           </div>
       )
   }

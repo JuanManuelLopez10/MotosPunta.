@@ -1,6 +1,6 @@
 import './App.scss';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/itemlist/ItemListContainer';
 import Navbar from './components/navbar/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart'

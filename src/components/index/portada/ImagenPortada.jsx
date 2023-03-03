@@ -14,8 +14,7 @@ const ImagenPortada = () => {
         )
     }else{
         return(
-            <video id='Portada_Video' autoPlay muted loop className='col-12' src='./assets/wallpapers/wallpaper-horizontal.mp4'>
-            </video>
+            <img src="https://iili.io/HW9yk3N.jpg" alt="MT" className='col-12'/>
         )
     }
 }

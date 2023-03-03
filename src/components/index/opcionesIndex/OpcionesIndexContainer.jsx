@@ -2,7 +2,7 @@ import React from 'react'
 import OpcionesIndex from './OpcionesIndex'
 
 const OpcionesIndexContainer = () => {
-  const motos = ["Cubs", "Scooter", "Calle", "Naked", "Touring", "Custom"]
+  const motos = ["Polleritas", "Scooter", "Calle", "Naked", "Touring", "Custom"]
   const cascos = ["Integrales", "Rebatibles", "Abiertos", "Cross", "Multiproposito", "Accesorios"]
   const indumentaria = ["Camperas", "Antiparras", "Guantes", "Mochilas", "Pantalones", "Botas"]
   const accesorios = ["Baules", "Alforjas", "Valijas laterales", "Mochilas", "Trancas", "Cubiertas", "Aceites y lubricantes"]

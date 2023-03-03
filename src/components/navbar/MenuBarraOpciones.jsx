@@ -16,7 +16,7 @@ const MenuBarraOpciones = () => {
                     <button className='bg-none color-white opcionclase'>Marcas</button>
                 </div>
           )
-    } else if(usarcont.abiertoono===true && usarcont.abiertoproductos==="Productos"){
+    } else if(usarcont.abiertoono==true && usarcont.abiertoproductos==="Productos"){
         return(
                 <div className='h-75 col-9 d-flex flex-column justify-content-around animate__animated animate__fadeInLeft'>
                     <Botoncambiarmenu opcion={"Motos"}/>
@@ -25,7 +25,7 @@ const MenuBarraOpciones = () => {
                     <Botoncambiarmenu opcion={"Accesorios"}/>
                 </div>
         )
-    } else if(usarcont.abiertoono===true && usarcont.abiertoproductos==="Motos"){
+    } else if(usarcont.abiertoono==true && usarcont.abiertoproductos==="Motos"){
         console.log(usarcont.abiertoproductos);
         return(
                 <div className='h-75 col-9 d-flex flex-column justify-content-around animate__animated animate__fadeInLeft'>
@@ -37,7 +37,7 @@ const MenuBarraOpciones = () => {
                 <LinkAOpcion opcion={"Custom"}/>
                 </div>
         )
-    } else if(usarcont.abiertoono===true && usarcont.abiertoproductos==="Cascos"){
+    } else if(usarcont.abiertoono==true && usarcont.abiertoproductos==="Cascos"){
       console.log(usarcont.abiertoproductos);
       return(
               <div className='h-75 col-9 d-flex flex-column justify-content-around animate__animated animate__fadeInLeft'>
@@ -49,7 +49,7 @@ const MenuBarraOpciones = () => {
                 <LinkAOpcion opcion={"Accesorios"}/>
               </div>
       )
-  } else if(usarcont.abiertoono===true && usarcont.abiertoproductos==="Indumentaria"){
+  } else if(usarcont.abiertoono==true && usarcont.abiertoproductos==="Indumentaria"){
     console.log(usarcont.abiertoproductos);
     return(
             <div className='h-75 col-9 d-flex flex-column justify-content-around animate__animated animate__fadeInLeft'>
@@ -61,7 +61,7 @@ const MenuBarraOpciones = () => {
               <LinkAOpcion opcion={"Botas"}/>
             </div>
     )
-} else if(usarcont.abiertoono===true && usarcont.abiertoproductos==="Accesorios"){
+} else if(usarcont.abiertoono==true && usarcont.abiertoproductos==="Accesorios"){
   console.log(usarcont.abiertoproductos);
   return(
           <div className='h-75 col-9 d-flex flex-column justify-content-around animate__animated animate__fadeInLeft'>
