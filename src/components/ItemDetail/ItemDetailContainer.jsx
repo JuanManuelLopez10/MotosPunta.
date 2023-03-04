@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import GrowExample from "../Spinner";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../../utils/firebaseConfig'
+import Cargando from "../Cargando/Cargando";
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({})
@@ -27,11 +28,14 @@ const ItemDetailContainer = () => {
     }, [idItem])
     if (dato.id===undefined) {
         return(
-            <GrowExample/>
-        )
+            <Cargando/>
+            )
     }else{
     return(
+        <>
+        <Cargando/>
         <ItemDetail item={dato}/>
+        </>
     )
 }
 }

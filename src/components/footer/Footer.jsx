@@ -4,7 +4,6 @@ import ListaFooter from './ListaFooter'
 
 const Footer = () => {
   const usecontext = useContext(CartContext)
-  console.log("el use context es " + usecontext.scrorientation);
   const motos = ["Polleritas", "Scooters", "Calle", "Naked", "Touring", "Custom"]
   const cascos = ["Integrales", "Rebatibles", "Abiertos", "Cross", "Multiproposito", "Accesorios"]
   const indumentaria = ["Camperas", "Antiparras", "Guantes", "Mochilas", "Pantalones", "Botas"]

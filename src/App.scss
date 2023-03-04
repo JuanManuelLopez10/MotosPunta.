@@ -9,6 +9,17 @@
 
 @import "node_modules/direction-reveal/src/styles/direction-reveal.scss";
 
+.cargando{
+  height: 100vh;
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+}
 html{
   width: 100vw;
   overflow-x: hidden;

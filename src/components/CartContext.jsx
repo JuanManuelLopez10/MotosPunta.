@@ -19,7 +19,8 @@ const CartContextProvider = ({children}) => {
     const [selecindum, setselecindum] = useState(undefined)
     const [selecacces, setselecacces] = useState(undefined)
     const [selectedfooter, setselectedfooter] = useState(null)
-
+    const [cargado, setcargado] = useState(false)
+    
     useEffect(() => {
         const fetchFirestore = async() => {
             let q;
@@ -41,6 +42,16 @@ const CartContextProvider = ({children}) => {
     }
     const desseleccionarfooter = () => {
         setselectedfooter(null)
+    }
+
+    const ahoracargado = () => {
+        setcargado(true)
+    }
+    const ahoracargando = () => {
+        setcargado(1)
+    }
+    const ahoradescargado = () => {
+        setcargado(false)
     }
 
     const getHistorialseleccionado = (producto) => {
@@ -248,7 +259,7 @@ const CartContextProvider = ({children}) => {
 
     }
     return(
-    <CartContext.Provider value={{cartList, desseleccionarfooter, selectedfooter, seleccionarfooter, primeroferta, seleccasco, selecindum, selecacces, crearseleccionados, getHistorialseleccionado, productosseleccionados, datos, seleccionaropcionIndex, abrirseleccionaropcionIndex, cerrarseleccionaropcionIndex, abrirproductos, abrircascos, abrirmotos, abririndumentaria, abriraccesorios, abiertoproductos, cerrarmenu,agregarmenu, abiertoono, addToCart, calcpreciototal, deleteItem, Totalcompra, calccanttotal, CantProductos, clear, cambiodeorient, scrorientation, getscrorient}}>
+    <CartContext.Provider value={{cartList, desseleccionarfooter, ahoracargado, ahoracargando, ahoradescargado, cargado, selectedfooter, seleccionarfooter, primeroferta, seleccasco, selecindum, selecacces, crearseleccionados, getHistorialseleccionado, productosseleccionados, datos, seleccionaropcionIndex, abrirseleccionaropcionIndex, cerrarseleccionaropcionIndex, abrirproductos, abrircascos, abrirmotos, abririndumentaria, abriraccesorios, abiertoproductos, cerrarmenu,agregarmenu, abiertoono, addToCart, calcpreciototal, deleteItem, Totalcompra, calccanttotal, CantProductos, clear, cambiodeorient, scrorientation, getscrorient}}>
         {children}
     </CartContext.Provider>
     )

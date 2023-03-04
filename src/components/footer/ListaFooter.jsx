@@ -10,7 +10,7 @@ import TituloFooter from './TituloFooter'
 const ListaFooter = (props) => {
     const usarcontext = useContext(CartContext)
 
-    if(usarcontext === "landscape"){
+    if(usarcontext.scrorientation === "landscape"){
         return (
             <div className='col-2 d-flex flex-column align-items-center'>
                 <TituloFooter nombre={props.titulo}/>

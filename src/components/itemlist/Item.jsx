@@ -3,10 +3,11 @@ import { useContext } from "react"
 import { CartContext } from "../CartContext";
 
 const Item = ({props}) => {
-    const { getHistorialseleccionado, crearseleccionados, scrorientation } = useContext(CartContext)
+    const { getHistorialseleccionado, ahoradescargado, crearseleccionados, scrorientation } = useContext(CartContext)
     const subiralhistorial = () => {
         getHistorialseleccionado(props)
         crearseleccionados()
+        ahoradescargado()
     }
     if (scrorientation==="landscape") {
         return(

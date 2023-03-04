@@ -6,6 +6,7 @@ const LinkAOpcion = ({opcion}) => {
     const usarcont = useContext(CartContext)
     
     async function resolveAfter1Seconds() {
+      usarcont.ahoradescargado()
       if (usarcont.scrorientation==="portrait") {
         const barraopciones = document.getElementById('navbar')
         barraopciones.setAttribute('class', 'col-12 barraopciones d-flex flex-column align-items-center justify-content-center fixed-top animate__animated animate__fadeOutLeft')

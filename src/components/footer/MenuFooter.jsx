@@ -6,12 +6,10 @@ import OpcionFooter from './OpcionFooter';
 
 const MenuFooter = (props) => {
     const usarcontext = useContext(CartContext)
-    console.log("seleccionado es: " + props.titulo);
     const selec = (a) => {
         usarcontext.seleccionarfooter(a)
     }
     if (usarcontext.selectedfooter === props.titulo) {
-        console.log("seleccionado es: " + props.titulo);
         return (
             <>
                 <div>

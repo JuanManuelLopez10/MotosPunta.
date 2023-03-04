@@ -31,7 +31,7 @@ const Botonmenu = () => {
       if (usarcont.abiertoono==false) {
         return (
             <>
-            <button onClick={usarcont.agregarmenu} className='botones bg-none color-white col-1'><i class="bi bi-list"></i></button>
+            <button onClick={usarcont.agregarmenu} className='botones bg-none color-white col-1'><i className="bi bi-list"></i></button>
             </>
           )        
       }else{

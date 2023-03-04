@@ -9,6 +9,15 @@ overflow-x: hidden;
     z-index: 3;
     left: 0px;
     align-self: flex-end;
+    color: white;
+}
+.imagenwallpaper{
+    height: 100vh;
+}
+.tituloportada{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    height: 20%;
+    color: white;
 }
 #Portada_Video{
     align-self: flex-start;
@@ -18,4 +27,9 @@ overflow-x: hidden;
 }
 .portadaitemlist{
     height: 75vh;
+}
+.wallpaper{
+    height: 100vh;
+    overflow-y: hidden;
+    width: 100vw;
 }

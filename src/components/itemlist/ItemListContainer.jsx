@@ -4,11 +4,17 @@ import { useParams } from "react-router-dom";
 import { db } from '../../utils/firebaseConfig'
 import { collection, getDocs, query, where } from "firebase/firestore"; 
 import PortIndex from "./PortadaIndex"
+import Cargando from "../Cargando/Cargando";
+import { useContext } from "react";
+import { CartContext } from "../CartContext";
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([])
     const { idCat } = useParams();
-
+    const usarcontext = useContext(CartContext)
+    const ahora = () => {
+        usarcontext.ahoradescargado()
+    }    
     useEffect(() => {
         const fetchFirestore = async() => {
             let q;
@@ -34,13 +40,14 @@ const ItemListContainer = () => {
     if (datos.length===0) {
         return(
             <>
-            <h1>Cargando...</h1>
+                <Cargando/>
             </>
         )
     
     }else{
         return(
             <>
+                <Cargando/>
                 <PortIndex producto={productoCero} idCat={idCat}/>
                 <ItemList datos={datos}/>
             </>

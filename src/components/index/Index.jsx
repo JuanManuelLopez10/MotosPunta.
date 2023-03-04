@@ -6,6 +6,8 @@ import { collection, getDocs, query } from "firebase/firestore";
 import { useContext } from 'react';
 import { CartContext } from '../CartContext';
 import { db } from '../../utils/firebaseConfig';
+import Cargando from '../Cargando/Cargando';
+
 
 
 const Index = () => {
@@ -39,6 +41,7 @@ const Index = () => {
     if (seleccasco) {
       return (
         <>
+        <Cargando/>
         <Portada/>
         <OpcionesIndexContainer/>
         </>

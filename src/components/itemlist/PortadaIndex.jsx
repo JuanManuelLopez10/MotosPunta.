@@ -6,7 +6,6 @@ import TextoPortada from './TextoPortada';
 
 
 const PortIndex = (props) => {
-  console.log(props.producto);
   const usarcont = useContext(CartContext)
   if(usarcont.scrorientation==='portrait'){
     return (
