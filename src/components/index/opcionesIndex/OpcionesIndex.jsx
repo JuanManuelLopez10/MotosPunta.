@@ -27,8 +27,7 @@ const OpcionesIndex = (props) => {
     }else{
         return (
             <>
-            <button className='col-6 p-0 d-flex' id={props.principal} onMouseOver={() => {cambiarOn(props.principal)}} onMouseLeave={() => {cerrarOn()}} to={`/clase/${props.principal}`}>
-                <ImagenOpcion principal={props.principal}/>
+            <button className='col-6 p-0 d-flex opcionindex' style={{backgroundImage: `url(/assets/categorias_index/${props.principal}.png)`, backgroundSize: "cover"}} id={props.principal} onMouseOver={() => {cambiarOn(props.principal)}} onMouseLeave={() => {cerrarOn()}} to={`/clase/${props.principal}`}>
                 <MenuOpcion key={props.principal} clase={props.principal} secundario={props.secundario}/> 
             </button>
             </>
