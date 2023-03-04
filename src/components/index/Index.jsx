@@ -9,6 +9,7 @@ import { db } from '../../utils/firebaseConfig';
 
 
 const Index = () => {
+  
   const [datos, setDatos] = useState([])
   const { primeroferta, crearseleccionados, seleccasco } = useContext(CartContext)
   const abrircont = (a) => {
