@@ -26,7 +26,9 @@ const Producto = ({item}) => {
     }
   return (
     <div className="col-12 d-flex flex-wrap justify-content-around">
-    <img className="col-5" src={item.foto} alt="" />
+    <div className="imagenproducto d-flex align-items-center">
+        <img className="col-12" src={item.foto} alt="" />
+    </div>
     <div className="col-5 d-flex flex-column justify-content-around">
         <h1 className="productonombre col-12">{item.nombre}</h1>
         <h3 className="productoprecio col-12">USD {item.precio}</h3> 
