@@ -10,9 +10,9 @@ const PortIndex = (props) => {
   const usarcont = useContext(CartContext)
   if(usarcont.scrorientation==='portrait'){
     return (
-      <div className='d-flex portada flex-nowrap justify-content-center align-items-end'>
+      <div className='d-flex portada flex-nowrap justify-content-center align-items-end portadaitemlist'>
           <ImagenPortada wallpapervertical={props.producto.wallpapervertical}/>
-          <TextoPortada/>
+          <TextoPortada idCat={props.idCat}/>
       </div>
     )
   }else{

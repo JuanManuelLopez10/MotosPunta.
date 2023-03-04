@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../../CartContext'
 import MenuOpcion from './MenuOpcion'
@@ -20,9 +19,9 @@ const OpcionesIndex = (props) => {
     if(usarcont.scrorientation==='portrait'){
         return (
             <>
-            <Link className='opcionindex col-12' onMouseOver={() => {cambiarOn(props.principal)}} to={`/clase/${props.principal}`}>
-                <img className='col-12' src={`./assets/categorias_index/${props.principal}.png`} alt={props.principal}/>
-            </Link>
+            <button className='col-12 p-0 d-flex' style={{backgroundImage: `/assets/categorias_index/${props.principal}.png`}} id={props.principal} onMouseOver={() => {cambiarOn(props.principal)}} onMouseLeave={() => {cerrarOn()}} to={`/clase/${props.principal}`}>
+                <MenuOpcion key={props.principal} clase={props.principal} secundario={props.secundario}/> 
+            </button>
             </>
           )        
     }else{

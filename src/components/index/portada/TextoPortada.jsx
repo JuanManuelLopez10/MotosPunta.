@@ -10,7 +10,7 @@ const TextoPortada = () => {
   if(usarcont.scrorientation==='portrait'){
     return(
     <div className='portada-texto h-25 d-flex flex-column align-items-center justify-content-center col-12' >
-    <h2 className='color-white'>MT Revenge Replica</h2>
+    <h2 className='color-white'>MT KRE+ Pedro Acosta </h2>
     <Link className='opcionclase' to={`/item/mtkrepedroacosta`}>Ver más</Link>
   </div>
   )
