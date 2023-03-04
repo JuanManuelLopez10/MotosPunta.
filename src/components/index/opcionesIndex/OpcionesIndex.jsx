@@ -19,7 +19,7 @@ const OpcionesIndex = (props) => {
     if(usarcont.scrorientation==='portrait'){
         return (
             <>
-            <button className='col-12 p-0 d-flex' style={{backgroundImage: `/assets/categorias_index/${props.principal}.png`}} id={props.principal} onMouseOver={() => {cambiarOn(props.principal)}} onMouseLeave={() => {cerrarOn()}} to={`/clase/${props.principal}`}>
+            <button className='opcionindexvertical col-12 d-flex' style={{backgroundImage: `url(/assets/categorias_index/${props.principal}.png)`, backgroundSize: "cover"}} id={props.principal} onClick={() => {cambiarOn(props.principal)}}  to={`/clase/${props.principal}`}>
                 <MenuOpcion key={props.principal} clase={props.principal} secundario={props.secundario}/> 
             </button>
             </>

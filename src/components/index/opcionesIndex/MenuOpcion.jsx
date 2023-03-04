@@ -11,7 +11,7 @@ const MenuOpcion = (props) => {
     if (props.clase===usarcont.seleccionaropcionIndex) {
         if (usarcont.scrorientation==="landscape"){
         return(
-            <div className='MenuOpcion opcionclase position-absolute m-0 d-flex justify-content-center col-6 animate__animated animate__fadeIn'>
+            <div className='MenuOpcion opcionclase position-absolute m-0 p-0 d-flex justify-content-center col-6 animate__animated animate__fadeIn'>
                 <div className='col-8 d-flex flex-column'>
                     <h1>{aaa.toUpperCase()}</h1>
                     <div className='MenuOpcion2 d-flex flex-column flex-wrap'>
