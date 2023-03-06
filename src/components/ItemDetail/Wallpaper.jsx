@@ -17,7 +17,7 @@ const Wallpaper = ({item}) => {
   }else{
     return (
       <div className='col-12 d-flex flex-nowrap'>
-              <img className="col-12 imagenwallpaper" src={item.wallpaperhorizontal} alt="logo" />
+              <img className="imagenwallpaper" src={item.wallpaperhorizontal} alt="logo" />
               <TextoPortada item={item}/>
       </div>
     )
@@ -26,3 +26,4 @@ const Wallpaper = ({item}) => {
 }
 
 export default Wallpaper
+
