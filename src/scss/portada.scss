@@ -10,6 +10,9 @@ overflow-x: hidden;
     left: 0px;
     align-self: flex-end;
     color: white;
+    &item{
+        height: 100%;
+    }
 }
 .port{
     height: 80vh;

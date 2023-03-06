@@ -9,8 +9,8 @@ const Wallpaper = ({item}) => {
   if(usarcont.scrorientation==='portrait'){
     return (
       <div className='col-12 d-flex flex-nowrap port'>
-              <img className="imagenwallpaper" src={item.wallpapervertical} alt="logo" />
-              <TextoPortada item={item}/>
+              <img className="imagenwallpaper col-12" src={item.wallpapervertical} alt="logo" />
+              <TextoPortada item={item}/> 
               <TituloPortada titulo={item.nombre}/>
       </div>
     )
