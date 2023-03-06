@@ -10,7 +10,7 @@ const Wallpaper = ({item}) => {
     return (
       <div className='col-12 d-flex flex-nowrap wallpaper'>
               <div className="imagenwallpaper">
-                <img src={item.wallpapervertical} alt="logo" />
+                <img className='col-12' src={item.wallpapervertical} alt="logo" />
               </div>
               <TextoPortada item={item}/>
               <TituloPortada titulo={item.nombre}/>
