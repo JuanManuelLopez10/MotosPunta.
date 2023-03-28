@@ -247,7 +247,8 @@ const CartContextProvider = ({children}) => {
                 precio: item.precio,
                 foto: item.foto,
                 cantidad: item.cantidad,
-                preciototal: item.precio * item.cantidad
+                preciototal: item.precio * item.cantidad,
+                talle: item.talle
             }
             ])
 

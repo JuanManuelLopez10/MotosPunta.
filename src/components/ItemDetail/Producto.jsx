@@ -1,13 +1,29 @@
 import React from 'react'
+import { useState } from 'react'
 import { useContext } from "react"
 import { CartContext } from "../CartContext"
 
 const Producto = ({item}) => {
     const { addToCart, calcpreciototal, calccanttotal, getHistorialseleccionado, productosseleccionados } = useContext(CartContext)
-    const aa = () => {
+    const [TalleProducto, setTalleProducto] = useState(null)
+    const aa = (a) => {
+    console.log(item.talle);
     addToCart(item)
     calcpreciototal(item.precio, item.cantidad)
     calccanttotal(item.cantidad, item.id)
+    }
+    let talles = []
+    if (item.talles) {
+        for (let index = 0; index < item.talles.length; index++) {
+            const element = item.talles[index];
+            talles.push(element)
+        }
+    }
+    const seleccionartalle = () => {
+
+        setTalleProducto(document.getElementById('select').value)
+        item.talle = TalleProducto
+        console.log(item);
     }
     const restar = () => {
         let itemcantidad = document.getElementById('itemcantidad')
@@ -33,8 +49,18 @@ const Producto = ({item}) => {
         <h1 className="productonombre col-12">{item.nombre}</h1>
         <h3 className="productoprecio col-12">USD {item.precio}</h3> 
         <p className="productodescripcion">{item.descripcion}</p>
-        <button id='botonagregar2' className='productodescripcion' onClick={aa}>Agregar al carrito</button>
-        <h5 className="col-5">Stock: <span id="stockdisponible">{item.stock}</span></h5>
+        {
+        item.talles
+        ?<select id='select' className='col-4 m-3' onChange={()=>{seleccionartalle()}}>
+            {
+                item.talles.map(element => <option value={element} onSelect={()=>{console.log(element);}}  key={element}>{element}</option>)
+            }
+        </select>
+        :<h5 className="col-5 m-3">Stock: <span id="stockdisponible">{item.stock}</span></h5>
+
+        }
+        <button id='botonagregar2' className='productodescripcion m-3' onClick={aa}>Agregar al carrito</button>
+
     </div>
 
 </div>

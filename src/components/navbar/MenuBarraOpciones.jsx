@@ -33,8 +33,8 @@ const MenuBarraOpciones = () => {
                 <LinkAOpcion opcion={"Scooters"}/>
                 <LinkAOpcion opcion={"Calle"}/>
                 <LinkAOpcion opcion={"Naked"}/>
-                <LinkAOpcion opcion={"Touring"}/>
-                <LinkAOpcion opcion={"Custom"}/>
+                <LinkAOpcion opcion={"Multipropósito"}/>
+                <LinkAOpcion opcion={"Sport"}/>
                 </div>
         )
     } else if(usarcont.abiertoono==true && usarcont.abiertoproductos==="Cascos"){
